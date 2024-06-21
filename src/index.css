@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    [type="text"],
+    input:where(:not([type])),
+    [type="email"],
+    [type='url'],
+    [type='password'],
+    [type='number'],
+    [type='date'],
+    [type='datetime-local'],
+    [type='month'],
+    [type='search'],
+    [type='tel'],
+    [type='time'],
+    [type='week'],
+    [multiple],
+    textarea,
+    select{
+        @apply w-full border-2 rounded-lg py-4 secondary_color_border bg-gray-50
+         focus:border-[#181818] focus:ring-1 focus:ring-[#181818];
+    }
+    [type="checkbox"],
+    [type="radio"]{
+        @apply rounded border border-purple-400;
+    }
+  }
+  @layer base{
+    div{
+        @apply font-['Roboto_Slab'] text-[#FDFDFD]
+    }
+    p{
+      @apply text-sm;
+    }
+    h1{
+        @apply text-6xl font-serif
+    }
+    h2{
+      @apply text-2xl font-serif
+    }
+    h3{
+      @apply text-2xl font-serif
+    }
+    li{
+      @apply my-2
+    }
+  }
+  @layer components {
+    .btn_solid{
+      @apply btn px-10 py-2 text-xl text-white bg-[#EB5D7E] text-center  rounded-md font-semibold
+      transition-all hover:bg-[#995BFC] focus:bg-[#FFAD1A]
+    }
+  
+    .btn_outline{
+      @apply btn px-10 py-2 text-xl text-white secondary_color_bg text-center  rounded-md font-semibold
+      transition-all hover:bg-[#EB5D7E] focus:bg-[#EB5D7E]
+    }
+  
+    .btn_ghost{
+      @apply btn px-10 py-2 text-xl text-center m-2 text-white rounded-md bg-[#995BFC]
+   hover:bg-purple-700 focus:bg-[#3B3C6A] font-semibold transition-all
+   }
+  }
+.primary_color_bg{
+    @apply bg-[#050505]
+}
+.primary_color_text{
+    @apply text-[#FDFDFD]
+}
+.secondary_color_text{
+    @apply text-[#F57F03]
+}
+.secondary_color_bg{
+@apply bg-[#F57F03]
+}
+.secondary_color_border{
+    @apply border-[#F57F03]
+}
+.ghost_color_bg{
+  @apply bg-[#181818]
+}
+.ghost_color_border{
+  @apply border-[#181818]
+}
+.Intro{
+    @apply primary_color_bg py-20 px-5 primary_color_text
+
+}
