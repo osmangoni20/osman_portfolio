@@ -94,4 +94,61 @@
 .banner{
   @apply bg-[url('../src//assets/background-design.png')] bg-contain bg-right bg-no-repeat
 }
-/*  */
+
+.profile_image{
+  position: absolute;
+  top: 200px;
+  right: 20px;
+  animation-name: profile_avatar;
+  animation-duration: 8s;
+  transition: all;
+}
+
+.circle1{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #202C44;
+  background-color: #525f63;
+  border-radius: 50px;
+  left: 0px;
+  top: 0px;
+  animation-name: circle;
+  animation-duration: 5s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+  transition: all;
+}
+@keyframes profile_avatar {
+  0%{
+    right: 0px;
+    top: 0px;
+  }
+  50%{
+    right: 300px;
+    top: 120px;
+  }
+
+  100%{
+    top: 200px;
+    right: 20px;
+  }
+
+}
+
+@keyframes circle{
+  0%{
+    left: 0px;
+    top: 0px;
+  }
+  50%{
+    left: 20%;
+    top: 70%;
+  }
+
+  100%{
+    top: 40%;
+    left: 80%;
+  }
+
+}
