@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <div>
       <div className="flex items-center pl-0 p-[0.5rem] min-h-[4rem] w-full z-10 primary_color_bg fixed top-0 shadow-sm shadow-white">
-        <div className="navbar-start text-2xl">
+        <div className="navbar-start text-2xl md:flex items-center">
           <div onClick={HandleNavbar} className=" dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -75,7 +75,7 @@ const Navbar = () => {
             </ul>
            }
           </div>
-          <h1 className="btn btn-ghost text-2xl lg:block hidden">Mohamad Osman Goni</h1>
+          <h2 className="font-bold px-2 text-2xl lg:block hidden">Mohamad Osman Goni</h2>
         </div>
         <div className=" w-full hidden md:flex text-2xl lg:flex">
           <ul className="navbar-end menu-horizontal flex  gap-10 py-2 w-full   px-1 text-2xl">

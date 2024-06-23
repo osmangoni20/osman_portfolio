@@ -24,7 +24,7 @@ const ContactSection = () => {
     e.target.reset();
   };
   return (
-    <div className="md:my-15 my-5">
+    <div className="md:my-15 md:p-4 my-5">
         <div className="pb-10">
         <h2 className="text-center text-4xl md:text-5xl pb-5">Contact Me</h2>
         <p className="text-center text-md ">Bellow ar the details to reach out to me !</p>

@@ -98,7 +98,7 @@ const ExperianceAndAchiv = () => {
           </ul>
         </div>
         
-        <div className='flex py-5 flex-col-reverse md:flex items-center border-t-2 md:border-none'>
+        <div className='flex py-5 flex-col-reverse md:flex-row md:flex items-center border-t-2 md:border-none'>
             <div>
                 <h6 className='text-xl'>Successfully Completed</h6>
                 <h3 className='text-2xl secondary_color_text'>Complete Web Development Course with Jhankar Mahbub</h3>

@@ -57,7 +57,7 @@
   
     .btn_outline{
       @apply btn md:px-10 py-2 text-xl text-white secondary_color_bg text-center  rounded-md font-semibold
-      transition-all hover:bg-[#EB5D7E] focus:bg-[#EB5D7E]
+      transition-all hover:bg-[#131B2E] focus:bg-[#131B2E]
     }
   
     .btn_ghost{
@@ -92,6 +92,6 @@
   @apply bg-gray-700 p-2 px-4 text-white rounded-md
 }
 .banner{
-  @apply bg-[url('../src//assets/background-design.png')] bg-contain bg-right bg-no-repeat transition-all translate-x-0
+  @apply bg-[url('../src//assets/background-design.png')] bg-contain bg-right bg-no-repeat
 }
 /*  */

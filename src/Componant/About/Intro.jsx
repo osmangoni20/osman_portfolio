@@ -35,7 +35,7 @@ const Intro = () => {
           JavaScript and I love to do most of the programme using JavaScript and
           TypeScript. I love to make the web more open to the world.
         </p>
-        <div className=" w-full p-0 btn_outline my-3">
+        <div className=" btn_outline my-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

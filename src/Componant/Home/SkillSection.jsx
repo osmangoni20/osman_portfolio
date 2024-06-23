@@ -1,7 +1,7 @@
 
 const SkillSection = () => {
     return (
-        <div className="md:py-20 py-5">
+        <div className="md:py-10 md:mx-14 py-5 ">
               <div className="mt-4">
                 <h2 className="text-4xl md:text-5xl md:py-10 text-center">My Skill</h2>
                 {/* Fontend Skill */}
