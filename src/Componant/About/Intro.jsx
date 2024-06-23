@@ -5,16 +5,16 @@ import Typical from "react-typical";
 const Intro = () => {
   return (
     <div>
-      <div className="pl-10">
+      <div className="md:pl-10 md:text-left text-center ">
         <h1 className="py-3">
           <span className="block py-3">I'm</span>
           <span className=" secondary_color_text ">Mohammad Osman Goni</span>
         </h1>
-        <h2 className="text-4xl">
+        <h2 className="text-xl md:text-4xl">
           <Typical
             loop={Infinity}
-            wrapper="p"
-            className="text-4xl"
+            wrapper="b"
+            className="text-xl md:text-4xl"
             delayMs="5000"
             steps={[
               "Web Developer",
@@ -30,12 +30,12 @@ const Intro = () => {
             ]}
           />
         </h2>
-        <p>
+        <p className="text-justify">
           I'm a passionateFull Stack MERN developer.My core skills are based on
           JavaScript and I love to do most of the programme using JavaScript and
           TypeScript. I love to make the web more open to the world.
         </p>
-        <button className="btn_outline my-3">
+        <div className=" w-full p-0 btn_outline my-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -58,7 +58,7 @@ const Intro = () => {
           >
             Download Resume
           </Link>
-        </button>
+        </div>
       </div>
     </div>
   );

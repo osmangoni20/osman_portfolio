@@ -1,6 +1,6 @@
 const Service = () => {
   return (
-    <div id={'section1'}>
+    <div id={'service'} >
       <div>
         <h2 className="text-center text-5xl py-12">What I Do</h2>
         <div className="flex flex-wrap justify-center gap-10">

@@ -6,6 +6,8 @@ import Home from "../page/Home";
 import About from "../page/About";
 import ProjectList from "../page/ProjectList";
 import Contact from "../page/Contact";
+import Blog from "../page/Blog";
+import SingleProjectDetails from "../page/SingleProjectDetails";
 const route =createBrowserRouter([
     {
         path:"/",
@@ -20,8 +22,15 @@ const route =createBrowserRouter([
                 element:<ProjectList/>
             },
             {
+                path:"/project_details/:id",
+                element:<SingleProjectDetails/>
+            },
+            {
                 path:"/contact",
                 element:<Contact/>
+            },{
+                path:"/blog",
+                element:<Blog/>
             }
         ]
     },

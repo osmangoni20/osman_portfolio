@@ -1,10 +1,10 @@
 
-import course_certificate from '../../assets/osman_avatar.png'
+import course_certificate from '../../assets/course_certificate.png'
 
 const ExperianceAndAchiv = () => {
   return (
     <div id='experience_achieve'>
-      <div className='my-10'>
+      <div className='my-5'>
         <h2 className='text-4xl text-center py-10'>
           <span className="block">Professional Experience</span>
           <span className="block">&</span>
@@ -55,7 +55,7 @@ const ExperianceAndAchiv = () => {
               Authorizations, MongoDB Database with Mongoose
             </li>
 
-            <li className="flex gap-1 align-middle">
+            <li className="lg:flex gap-1 align-middle">
               
                 <div className='flex gap-1'>
                <span>
@@ -77,7 +77,7 @@ const ExperianceAndAchiv = () => {
                <span className='text-xl'> Technology:</span>
                 </div>
               
-            
+              <div className='flex flex-wrap gap-2'>
               <li className="rounded-lg px-2 text-sm secondary_color_bg text-white">
                 React Js
               </li>
@@ -93,15 +93,16 @@ const ExperianceAndAchiv = () => {
               <li className="rounded-lg px-2 text-sm secondary_color_bg text-white">
                 Github
               </li>
+              </div>
             </li>
           </ul>
         </div>
         
-        <div className='flex items-center'>
+        <div className='flex py-5 flex-col-reverse md:flex items-center border-t-2 md:border-none'>
             <div>
                 <h6 className='text-xl'>Successfully Completed</h6>
                 <h3 className='text-2xl secondary_color_text'>Complete Web Development Course with Jhankar Mahbub</h3>
-                <p>11 August, 2022 - 16 November, 2022</p>
+                <p>Programming Hero</p>
                 <ul className='py-3'>
                 <li className="flex gap-1 text-justify">
               <span>
@@ -151,7 +152,7 @@ const ExperianceAndAchiv = () => {
                 </ul>
             </div>
             <div>
-                <img className='h-[250px] mx-2 w-[300px]' src={course_certificate}/>
+                <img className=' md:mx-2 lg:w-[350px]' src={course_certificate}/>
             </div>
         </div>
       </div>

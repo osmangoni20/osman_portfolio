@@ -26,7 +26,7 @@ const Contact = () => {
     <div className="flex justify-center my-20">
       <div>
         <h2 className=" text-5xl py-10 text-center">Get in <span className="secondary_color_text">Touch</span></h2>
-        <div className="flex justify-between items-center px-5">
+        <div className="lg:flex justify-between items-center px-5">
           {/* <form  onSubmit={emailSend}>
                     <div class="form-group">
                         <label for="email">Email address</label>
@@ -138,7 +138,7 @@ const Contact = () => {
           </div>
           <div>
             <form
-              className=" pt-5 min-w-[600px] p-5 border-l-2 ml-2"
+              className=" text-black text-xl pt-5 min-w-[600px] p-5 border-l-2 ml-2"
               onSubmit={handleSubmit(emailSend)}
             >
               
@@ -172,11 +172,12 @@ const Contact = () => {
                 <textarea
                   placeholder="Your Message"
                   type="text"
+                  className="h-[200px]"
                   id="message"
                   {...register("message")}
                 />
               </div>
-              <div className="flex justify-center">
+              <div className="flex justify-center py-10">
                 <input
                   type="submit"
                   value={"Send Message"}

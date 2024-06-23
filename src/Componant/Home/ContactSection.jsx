@@ -24,14 +24,14 @@ const ContactSection = () => {
     e.target.reset();
   };
   return (
-    <div className="my-15">
+    <div className="md:my-15 my-5">
         <div className="pb-10">
-        <h2 className="text-center text-4xl pb-5">Contact Me</h2>
-        <p className="text-center text-xl ">Bellow ar the details to reach out to me !</p>
+        <h2 className="text-center text-4xl md:text-5xl pb-5">Contact Me</h2>
+        <p className="text-center text-md ">Bellow ar the details to reach out to me !</p>
         </div>
-      <div className="flex gap-10 items-center justify-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center justify-center">
         <div>
-          <ul className="py-5 pl-5 w-full flex flex-wrap gap-2">
+          <ul className="py-5 pl-5 w-full flex flex-wrap justify-center gap-4">
             <li
               className="text-center"
             >
@@ -43,7 +43,7 @@ const ContactSection = () => {
                 viewBox="0 0 24 24"
                 strokeWidth="2.5"
                 stroke="currentColor"
-                className="size-16 border-2 rounded-full secondary_color_border p-1"
+                className="size-10 border-2 rounded-full secondary_color_border p-1"
               >
                 <path
                   strokeLinecap="round"
@@ -52,7 +52,7 @@ const ContactSection = () => {
                 />
               </svg>
                 </span>
-                <h3>E-mail Address</h3>
+                <h4>E-mail Address</h4>
                 <span>osmangoni0827@gmail.com</span>
            
             </li>
@@ -67,7 +67,7 @@ const ContactSection = () => {
                 viewBox="0 0 24 24"
                 strokeWidth="2.5"
                 stroke="currentColor"
-                className="size-16 border-2 rounded-full secondary_color_border p-1"
+                className="size-10 border-2 rounded-full secondary_color_border p-1"
               >
                 <path
                   strokeLinecap="round"
@@ -77,7 +77,7 @@ const ContactSection = () => {
               </svg>
 </span>
              
-                <h3>Phone Number</h3>
+                <h4>Phone Number</h4>
                 <span>+880160776224</span>
           
             </li>
@@ -93,7 +93,7 @@ const ContactSection = () => {
                 viewBox="0 0 24 24"
                 strokeWidth="2.5"
                 stroke="currentColor"
-                className="size-16 border-2 rounded-full secondary_color_border p-1"
+                className="size-10 border-2 rounded-full secondary_color_border p-1"
               >
                 <path
                   strokeLinecap="round"
@@ -108,7 +108,7 @@ const ContactSection = () => {
               </svg>
 </span>
             
-                <h3>Location </h3>
+                <h4>Location </h4>
                 <span>Feni, Chittagong-Bangladesh</span>
             
             </li>
@@ -116,7 +116,7 @@ const ContactSection = () => {
         </div>
         <div>
           <form
-            className=" pt-5 min-w-[600px] p-5 border-l-2 ml-2"
+            className="pt-5 md:min-w-[600px] md:p-5 lg:border-l-2 ml-2"
             onSubmit={handleSubmit(emailSend)}
           >
             <div className="w-full my-2">
@@ -157,6 +157,7 @@ const ContactSection = () => {
                 Your Message
               </label>
               <textarea
+              className="h-[200px]"
                 placeholder="Your Message"
                 type="text"
                 id="message"

@@ -2,7 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* #202C44 */
 @layer base{
     [type="text"],
     input:where(:not([type])),
@@ -20,7 +20,8 @@
     [multiple],
     textarea,
     select{
-        @apply w-full border-2 rounded-lg py-4 secondary_color_border bg-gray-50
+        @apply w-full border-2 rounded-lg py-4 secondary_color_border
+         bg-gray-50 text-xl text-black
          focus:border-[#181818] focus:ring-1 focus:ring-[#181818];
     }
     [type="checkbox"],
@@ -36,10 +37,10 @@
       @apply text-sm;
     }
     h1{
-        @apply text-6xl font-serif
+        @apply md:text-6xl font-serif text-5xl
     }
     h2{
-      @apply text-2xl font-serif
+      @apply md:text-4xl font-serif text-3xl 
     }
     h3{
       @apply text-2xl font-serif
@@ -55,7 +56,7 @@
     }
   
     .btn_outline{
-      @apply btn px-10 py-2 text-xl text-white secondary_color_bg text-center  rounded-md font-semibold
+      @apply btn md:px-10 py-2 text-xl text-white secondary_color_bg text-center  rounded-md font-semibold
       transition-all hover:bg-[#EB5D7E] focus:bg-[#EB5D7E]
     }
   
@@ -64,8 +65,9 @@
    hover:bg-purple-700 focus:bg-[#3B3C6A] font-semibold transition-all
    }
   }
+ 
 .primary_color_bg{
-    @apply bg-[#050505]
+    @apply bg-[#131B2E]
 }
 .primary_color_text{
     @apply text-[#FDFDFD]
@@ -85,7 +87,11 @@
 .ghost_color_border{
   @apply border-[#181818]
 }
-.Intro{
-    @apply primary_color_bg py-20 px-5 primary_color_text
 
+.activeroute{
+  @apply bg-gray-700 p-2 px-4 text-white rounded-md
 }
+.banner{
+  @apply bg-[url('../src//assets/background-design.png')] bg-contain bg-right bg-no-repeat transition-all translate-x-0
+}
+/*  */

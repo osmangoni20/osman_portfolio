@@ -3,21 +3,22 @@ import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const SingleProjectCart = ({singleProjectData}) => {
-        const {project_name, live_site,server_site,client_site, type, stack ,project_img, font_tech, backend_tech, db_tech}=singleProjectData
-    return (
-    <div className="border-2 my-10 secondary_color_border rounded mx-6 shadow-md shadow-gray-600 p-5">
-      <div className="flex justify-between gap-10 items-center">
+        const {project_name, id, live_site,server_site,client_site, type, stack ,project_img, font_tech, backend_tech, db_tech}=singleProjectData
+    console.log(id)
+        return (
+    <div className="border-2 my-10 secondary_color_border rounded md:mx-6 shadow-md shadow-gray-600 p-5">
+      <div className="flex flex-col-reverse md:flex-row justify-between gap-10 lg:items-center">
         <div>
            
-          <h2>
+          <h3 className="text-xl md:text-3xl">
             Project Name: 
             <span className="secondary_color_text"> {project_name} </span>
-            <span className="text-[10px]">{stack}</span>
-          </h2>
-          <ul className=" flex gap-2 text-md items-center">
+            <span className="text-[10px] hidden md:block">{stack}</span>
+          </h3>
+          <ul className=" flex flex-wrap gap-2 text-sm md:text-md items-center">
             <li >
-             <Link className="flex my-0 py-0" to={live_site}>
-             Live
+             <Link className="flex flex-wrap my-0 py-0" to={live_site}>
+             Live Site
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -35,7 +36,7 @@ const SingleProjectCart = ({singleProjectData}) => {
             </li>
             <li>
                 <Link className="flex my-0 py-0" to={client_site}>
-                Client Site Code
+                Client Site 
 
 <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +57,7 @@ const SingleProjectCart = ({singleProjectData}) => {
             </li>
             <li >
                 <Link className="flex my-0 py-0" to={server_site}>
-                Server Site Code
+                Server Site 
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -76,39 +77,41 @@ const SingleProjectCart = ({singleProjectData}) => {
             </li>
            
           </ul>
-          <h2 className="text-xl py-2">Project Type: {type}</h2>
+          <h5 className="text-md md:text-xl py-2">Project Type: {type}</h5>
           <div className="py-5">
             <h3>Technologies</h3>
             
-           <div className="flex gap-2 items-center">
+           <div className="lg:flex gap-2 items-center pt-5 md:pt-10">
            <h6>Frontend-</h6>
-            <ul className="flex flex-wrap gap-5">
+            <ul className="flex flex-wrap gap-2 lg:gap-5">
            {font_tech.map((item,index)=><li  className="rounded-lg  px-2 text-sm secondary_color_bg text-white" key={index}>{item}</li>)}
             
             </ul>
            
            </div>
-           <div className="flex gap-2 items-center">
+           <div className="lg:flex gap-2 items-center">
            <h6>Backend-</h6>
-            <ul className="flex gap-5">
+            <ul className="flex flex-wrap gap-2 lg:gap-5">
            {backend_tech.map((item,index)=><li  className="rounded-lg px-2 text-sm secondary_color_bg text-white" key={index}>{item}</li>)}
 
             </ul>
            </div>
-          <div className="flex gap-2 items-center">
+          <div className="lg:flex gap-2 items-center">
           <h6>Database-</h6>
             <ul className="flex gap-5">
            {db_tech.map((item,index)=><li className="rounded-lg px-2 text-sm secondary_color_bg text-white" key={index} >{item}</li>)}
             </ul>
           </div>
           </div>
+          <div  className="flex justify-center">
           <button className="btn_outline">
-     <Link to={"/"}>More Details</Link>
+     <Link to={`/project_details/${id}`}>More Details</Link>
       </button>
+          </div>
         </div>
         <div>
           <figure>
-            <img className=" h-[350px] w-[600px] rounded" 
+            <img className=" lg:h-[350px] lg:w-[600px] h-[200px] w-[350px] rounded" 
             src={project_img}/>
           </figure>
         </div>

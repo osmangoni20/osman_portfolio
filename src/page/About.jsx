@@ -4,6 +4,7 @@ import Intro from "../Componant/About/Intro";
 import Skill from "../Componant/About/Skill";
 import ExperianceAndAchiv from "../Componant/About/ExperianceAndAchiv";
 import Education from "../Componant/About/Education";
+import { useState } from "react";
 
 const About = () => {
   const scrollToSection=(sectionId)=>{
@@ -11,14 +12,63 @@ const About = () => {
     console.log(section)
     section?.scrollIntoView({ behavior: 'smooth' });
 }
+const [showNav,setShowNab]=useState(true)
+const HandleNavbar=()=>{
+    setShowNab(()=>!showNav)
+}
   return (
     <div className="primary_color_bg">
-      <div className="flex  gap-10 ">
+      <div className=" md:flex  gap-10 ">
         <div
           className=" text-white min-h-screen 
-      font-mono  bg-[#0f0f1a] rounded w-[400px]"
+      font-mono  bg-[#0f0f1a] rounded md:w-[400px]"
         >
-          <div className="flex border-b-2 p-3 py-5 flex-col justify-center items-center text-xl">
+           <ul className="md:hidden w-full z-20 fixed text-center text-3xl font-thin flex 
+           justify-between primary_color_bg
+                items-center">
+                  <li className="md:pr-10">
+                    <Link to={'/'}>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="2.5"
+                        stroke="currentColor"
+                        className="size-12"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                        />
+                      </svg>
+                    </Link>
+                  </li>
+                  <div onClick={HandleNavbar} className=" dropdown">
+          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      </div>
+           {
+            showNav&& <ul tabIndex={0} onClick={HandleNavbar} 
+            className="text-2xl h-[600px] right-0 menu menu-sm 
+            ml-0 primary_color_bg 
+            dropdown-content z-20 px-10 shadow ">
+              <li>
+                    <Link onClick={()=>scrollToSection('my_skill')}>My Skill</Link>
+                  </li>
+
+                  <li>
+                    <Link onClick={()=>scrollToSection('experience_achieve')}>
+                    Experience & Achievements</Link>
+                  </li>
+                  <li>
+                    <Link onClick={()=>scrollToSection('education')}>Education</Link>
+                  </li>
+            </ul>
+           }
+          </div>
+                </ul>
+          <div className="flex pt-20 md:pt-2 border-b-2 p-3 py-5 flex-col justify-center items-center text-xl">
             <figure>
               <img
                 className="h-[120px] w-[120px] rounded-full border-4  border-dotted
@@ -136,9 +186,11 @@ const About = () => {
 
         <div className=" bg-[#202029] w-full p-4 max-h-screen overflow-y-auto">
           <div className="flex justify-center w-full">
-            <div className=" w-full hidden  text-2xl lg:flex ">
-              <div className="flex gap-5 justify-between items-center w-full ">
-                <ul className="text-center text-3xl font-thin flex justify-between items-center">
+            <div className=" w-full md:flex   text-2xl lg:flex ">
+              <div className="block lg:flex gap-5 justify-between items-center 
+              w-full ">
+                <ul className="hidden text-center text-3xl font-thin md:flex justify-between 
+                items-center">
                   <li className="pr-10">
                     <Link to={'/'}>
                       <svg
@@ -160,7 +212,7 @@ const About = () => {
                   <li>About Me</li>
                 </ul>
 
-                <ul className="flex shadow-lg menu  menu-horizontal text-2xl  justify-center gap-5">
+                <ul className="hidden  md:gap-0 md:text-[18px] md:flex shadow-2xl   menu  menu-horizontal text-2xl  justify-center gap-5">
                   <li>
                     <Link onClick={()=>scrollToSection('my_skill')}>My Skill</Link>
                   </li>
@@ -176,7 +228,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="p-4">
+          <div className="md:p-4">
             <Intro />
             <Skill />
             <ExperianceAndAchiv />
