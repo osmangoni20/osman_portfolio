@@ -98,7 +98,7 @@ const Banner = () => {
 
                        <div className=''>
                         <figure>
-                            <img className=' profile_image border-2 h-[300px] w-[300px]
+                            <img className=' lg:profile_image border-2 h-[300px] w-[300px]
                             secondary_color_border rounded-full ' src={profile_image} alt='Profile Image'/>
                         </figure>
                        </div>
